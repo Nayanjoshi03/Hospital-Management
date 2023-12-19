@@ -1,0 +1,194 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Domaine Display;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+* {
+    font-family: Domaine Display, Times New Roman, sans-serif;
+    font-family: Proxima Nova, sans-serif
+}
+
+.flexr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.color {
+    color: #008565;
+}
+
+.com-name {
+    font-size: 60px;
+    color: #008565;
+
+}
+
+.text {
+    font: 1em sans-serif;
+    margin: 0% 5px;
+}
+
+
+li {
+    list-style: none;
+    /* remove bullets */
+
+}
+
+.btn {
+    background-color: #008565;
+    color: white;
+    font-size: medium;
+}
+
+nav section img {
+    height: 60px;
+}
+
+nav {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 99;
+
+
+}
+
+.center {
+    text-align: center;
+}
+
+.width-x {
+    max-width: 80vw;
+    margin: auto;
+}
+
+.septext {
+    font-size: large;
+    font-family: Domaine Display;
+
+}
+
+.text-xx {
+    font-family: Domaine Display;
+    font-size: 40px;
+}
+
+#section3 {
+    width: 100%;
+}
+
+#section3 div {
+    text-align: center;
+    width: 20%;
+    text-wrap: wrap;
+    margin: 5vh 5vw;
+
+
+}
+
+#section3 div p {
+    text-align: center;
+    text-wrap: wrap;
+}
+
+
+#section3 div img {
+    height: 100px;
+    margin: auto;
+
+}
+
+/*css of section 4 */
+#sec4,
+#sec4 .text-xx {
+    margin-top: 5vh;
+
+
+}
+
+#sec4 .text-xx {
+    margin-bottom: 3vh;
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+/* Style for individual cards */
+.card {
+    width: 338px;
+    height: 240px;
+    display: inline;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 1px 2px 4px #04755be0;
+    margin-bottom: 3vh;
+}
+
+.card:hover {
+    scale: 1.1;
+}
+
+/* Style for card headings */
+.card h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+h2.color {
+    margin-bottom: 5px;
+}
+
+/* Style for card content */
+.card p {
+    font-size: 1.2rem;
+}
+
+
+
+/*Section 6 Fotter section*/
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 36px;
+}
+
+/* Add your own social media icons (e.g., Font Awesome) and links below */
+.social-icons a:hover {
+    color: #0077b5;
+    /* Change the color on hover */
+}
+
+
