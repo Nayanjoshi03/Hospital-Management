@@ -1,0 +1,12 @@
+{
+    "name": "hospital/vendor",
+    "description": "hospital web site",
+    "autoload": {
+        "psr-4": {
+            "Hospital\\Vendor\\": "src/"
+        }
+    },
+    "require": {
+        "dompdf/dompdf": "^2.0"
+    }
+}

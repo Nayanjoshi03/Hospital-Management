@@ -12,8 +12,9 @@ a {
 
 
 * {
+    font-family: Proxima Nova, sans-serif;
     font-family: Domaine Display, Times New Roman, sans-serif;
-    font-family: Proxima Nova, sans-serif
+
 }
 
 .flexr {
@@ -31,8 +32,9 @@ a {
 .com-name {
     font-size: 60px;
     color: #008565;
-
+    font-family: Domaine Display;
 }
+
 
 .text {
     font: 1em sans-serif;
@@ -44,6 +46,18 @@ li {
     list-style: none;
     /* remove bullets */
 
+}
+
+.lable {
+    text-align: center;
+    background-color: #008565;
+    color: white;
+    font-size: 32px;
+
+}
+
+.ff {
+    font-family: Proxima Nova;
 }
 
 .btn {
@@ -58,7 +72,6 @@ nav section img {
 
 nav {
     position: -webkit-sticky;
-    /* Safari */
     position: sticky;
     top: 0;
     background-color: white;
@@ -87,6 +100,10 @@ nav {
     font-size: 40px;
 }
 
+.text-xxx {
+    font-size: 80px;
+}
+
 #section3 {
     width: 100%;
 }
@@ -111,6 +128,45 @@ nav {
     margin: auto;
 
 }
+
+/*css for nav =>user */
+
+#box {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    left: 85%;
+    height: 100px;
+    width: 200px;
+    background-color: #eeeeeeb3;
+    box-shadow: 1px 2px 4px #33333381;
+    border-radius: 5%;
+    padding: 5px;
+
+}
+
+#box div {
+    display: flex;
+    height: 50%;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+    /*box-shadow: 1px 2px 4px #33333381;*/
+
+
+}
+
+.sepcolor {
+    color: #ee510c;
+    font-weight: 500;
+}
+
+#box div img {
+    height: 40px;
+    width: 40px;
+}
+
+
 
 /*css of section 4 */
 #sec4,
@@ -174,6 +230,7 @@ h2.color {
     text-align: center;
 }
 
+/*social media icons */
 .social-icons {
     margin-top: 10px;
 }
@@ -185,10 +242,6 @@ h2.color {
     font-size: 36px;
 }
 
-/* Add your own social media icons (e.g., Font Awesome) and links below */
 .social-icons a:hover {
     color: #0077b5;
-    /* Change the color on hover */
 }
-
-

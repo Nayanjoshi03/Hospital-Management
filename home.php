@@ -1,13 +1,15 @@
 <?php
-    function Dup_check($email){
-        $conn = mysqli_connect("localhost", "root","","hospital");
-        if(mysqli_connect_errno()){}
-        else{
-            
-        }
+session_start();
+function Dup_check($email) // garbage code 
+{
+    $conn = mysqli_connect("localhost", "root", "", "hospital");
+    if (mysqli_connect_errno()) {
+    } else {
+
     }
+}
 
-
+require "button.php";
 
 ?>
 <!DOCTYPE html>
@@ -18,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/button.css">
     <style>
         * {
             margin: 0;
@@ -91,7 +94,7 @@
             }
         }
 
-        #lable {
+        .lable {
             text-align: center;
             background-color: #008565;
             color: white;
@@ -112,8 +115,22 @@
             margin-top: 1vh;
 
         }
+
+        #bag {
+            position: fixed;
+            bottom: 105px;
+            left: 83%;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: #008565;
+            border: 2px solid white;
+            outline: 2px solid #008565b0;
+
+        }
     </style>
     <script src="https://kit.fontawesome.com/5971317d29.js" crossorigin="anonymous"></script>
+    <script src="js/button.js"></script>
 </head>
 
 <body>
@@ -123,34 +140,34 @@
 
         $fname = $_POST["fname"];
         $lname = $_POST["lname"];
-        $number = (int) $_POST["number"];
+        $number = $_POST["number"];
         $email = $_POST["email"];
         $pass = $_POST["password"];
-        $user = strtolower(strtok($email, '@'));
+        $_SESSION["email"] = $email;
 
 
         $con = mysqli_connect("localhost", "root", "", "hospital"); // connection made change the localahost to server
         if (mysqli_connect_errno()) {
-            echo "Cannot connect to server " . mysqli_error();
+            echo "Cannot connect to server " . mysqli_error($con);
             header("Location:index.php?error=1");
             exit();
         }
-        
-        $sql = "INSERT INTO `users`(`First_Name`, `Last_Name`, `Phone_number`, `Email`, `Password`, `User_name`) VALUES ('$fname','$lname','$number','$email','$pass','$user')";
+
+        $sql = "INSERT INTO `users`(`First_Name`, `Last_Name`, `Phone_number`, `Email`, `Password`) VALUES ('$fname','$lname','$number','$email','$pass')";
         if (mysqli_query($con, $sql)) {
             echo "<script type='text/javascript'>asyn alert('user created successfully');</script>";
         } else {
-            header("Location:index.php?error=1");
+            header("Location:index.php?error=2");
             exit();
         }
 
         mysqli_close($con);
+        include "function/auth_code.php"; // This code is generation the auth code and storeing it in database 
     }
     include "nav.php";
+
+    require "button.php";
     ?>
-    <hr />
-
-
     <section class="flexr mg-3">
         <div id="text">
             <p>
@@ -171,7 +188,7 @@
             <img src="images/family.png" alt="Family photo">
         </div>
     </section>
-    <div id="lable">
+    <div class="lable">
         India's Most Prestigious Medical facility
     </div>
 
@@ -252,16 +269,17 @@
 
         </div>
     </section>
+    <!-- <button id="button">Talk to a doctor</button> -->
+    <!-- <button id="button1"><a href="Appointment.php"> Book an Appointment </a></button> -->
+    <?php
+    include "button.php";
+    ?>
     <?php
     include "footer.php";
     ?>
 
 
-
-
-
-
-
+    <script src="index.js"></script>
     <script>
         //const tc = document.getElementById("textchange");
         let t = ["Infrastructure", "Medical Staff", "Surgens"];

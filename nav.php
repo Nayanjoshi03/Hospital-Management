@@ -15,10 +15,20 @@ echo '
             </ul>
         </section>
         <section>
-            <button class="btn"> <a href="index.html">Login out</a></button>
+            <img src="images/user.svg" alt="user image" id="click">
+            <div id="box">
+                <div>
+                    <a href="profile.php">Profile</a>
+                    <a href="profile.php"><img src="images/profile.svg"></a>
+                </div>
+                <div>
+                    <a href="login.php">Logout</a>
+                    <a href="login.php"><img src="images/logout.svg"></a>
+                </div>
+            </div>
         </section>
     </nav>
-
+    <hr>
 
 ';
 

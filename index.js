@@ -1,25 +1,13 @@
-const pass = document.getElementById("password");
-const num = document.getElementById("number");
-
-function check() {
-    alert("function");
-    if (num.value == 1) {
-        alert("Enter a valid phone number ");
-        num.style.borderblockColor = "red";
-        return false;
+const box = document.getElementById("box");
+const imgc = document.getElementById("click");
+let show = false;
+imgc.addEventListener("click", () => {
+    if (!show) {
+        box.style.display = "flex";
+        show = true;
     }
-    return true;
-}
-
-pass.addEventListener("focusin", () => {
-    pass.type = "text";
+    else {
+        box.style.display = "none";
+        show = false;
+    }
 })
-
-pass.addEventListener("focusout", () => {
-    pass.type = "password";
-})
-const echeck=()=>{
-    var email=document.getElementById('email').value;
-    let val=document.forms["login"]["email"].value;
-    
-}

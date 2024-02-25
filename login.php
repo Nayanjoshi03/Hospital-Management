@@ -1,3 +1,24 @@
+<?php
+$passwd="";
+$email="";
+if (isset($_COOKIE["Auth_key"])) {
+    $auth = $_COOKIE['Auth_key'];
+    $con = mysqli_connect("localhost", "root", "", "hospital");
+    $sql = "SELECT `Email` FROM `auth` WHERE `Auth_key`='{$auth}'";
+    $res = mysqli_query($con, $sql);
+    $row = mysqli_fetch_array($res, 1);
+    $email = $row["Email"];
+    if (!empty($row)) {
+        $sql = "SELECT `Password` FROM `users` where `Email`='{$email}'";
+        $res = mysqli_query($con, $sql);
+        $pass = mysqli_fetch_array($res, 1);
+        $passwd = $pass["Password"];
+
+    }
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -119,7 +140,7 @@
     }
     ?>
     <div id="main">
-        <img src="logo.png">
+        <img src="images/logo.png">
 
         <div class="form">
             <h1>Sign in </h1>
@@ -129,13 +150,15 @@
 
                     <div>
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="" tabindex="4" required />
+                        <input type="email" id="email" name="email" value="<?php echo "{$email}" ?>" tabindex="4"
+                            required />
                     </div>
                     <div>
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="" tabindex="5" required />
+                        <input type="password" id="password" name="password" placeholder="" tabindex="5" required
+                            value="<?php echo "{$passwd}" ?>" />
                     </div>
-                    <input class="btn" type="submit" tabindex="7"/>
+                    <input class="btn" type="submit" tabindex="7" />
 
                     <div class="inline">
                         <p class="inline">Don't have Account </p>

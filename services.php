@@ -38,6 +38,10 @@
         background-color: #008565;
     }
 
+    .active {
+        background-color: #008565;
+    }
+
     /* Style the tab content */
     .tabcontent {
 
@@ -68,7 +72,7 @@
         <button class="tablinks" onclick="openCity(event, 'Orthopedic')">Orthopedic</button>
     </div>
 
-    <div id="Emergency Care" class="tabcontent">
+    <div id="Emergency Care" class="tabcontent ">
         <h1>Emergency Care</h1>
         <p class="content">It is the ‘Golden Hour‘ and the ‘Platinum Ten Minutes‘ that typify the significance of
             Emergency Medical
@@ -189,6 +193,7 @@
     <?php
     include "footer.php";
     ?>
+    <script src="index.js"></script>
 
     <script>
         function openCity(evt, cityName) {
