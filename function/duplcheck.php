@@ -2,7 +2,7 @@
 echo "submit";
 $email = $_POST["email"];
 
-$con = mysqli_connect("localhost", "root", "", "hospital"); // connection made change the localahost to server
+$con = mysqli_connect("localhost", "root", "", "hospital"); 
 if (mysqli_connect_errno()) {
     echo "Cannot connect to server " . mysqli_error();
     header("Location:index.php?error=1");

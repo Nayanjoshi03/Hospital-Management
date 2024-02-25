@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px 0 0 5px;
+}
+
+#calheader {
+    display: flex;
+    flex-direction: row;
+    background-color: #008565;
+    margin: auto;
+
+}
+
+#calheader button {
+    width: 52px;
+    background-color: #008565;
+    color: white;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#calheader button[disabled] {
+    color: red;
+
+}
+
+#calheader span {
+    width: 176px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+
+}
+
+#cal {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    justify-content: center;
+    align-items: stretch;
+    justify-items: center;
+
+}
+
+#cal button {
+    display: inline;
+    font-size: 20px;
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+}
+
+#cal span {
+    width: 40px;
+    font-size: 20px;
+    height: 25px;
+    background-color: antiquewhite;
+    text-align: center;
+
+
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 20px;
+          }
+          .card{
+                border-radius:5px;
+                padding:20px;
+              display: flex;
+                width:200px;
+                flex-direction:column;
+                border: 1px solid black;
+          }
+          .card p{
+              font-size:30px;
+                margin-bottom:10px;
+          }
+          .card span{
+              font-size:20px;
+          }
+          .card div[name="line2"]{
+              display: flex;
+                justify-content:space-between;
+          
+          }
+          .card input{
+                border:none;
+                text-align:center;
+              width:80px;
+                font-size:20px;
+          }
+          .card input:focus{
+              border: none;
+          }
+          .card button{
+            height:30px;
+            width:90px;
+            border-radius:4px;
+            background-color:#008565;
+            color:white;
+          }
+          
+                    
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="">
+        <p>Name</p>
+        <div name="line2">
+          <span>340</span>
+          <input type="number" value=1 min=1>
+        </div>
+        <div name="line3"> 
+         <button>Add to Cart</button>
+         <button>Buy Now </button>
+        </div>
+    
+    
+    </div>
+</body>
+</html>

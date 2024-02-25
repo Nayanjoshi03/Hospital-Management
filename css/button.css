@@ -1,0 +1,33 @@
+#button {
+    color: white;
+    width: 250px;
+    height: 60px;
+    font-size: x-large;
+    border-radius: 50px;
+    background-color: #04755b;
+    border: 3px solid white;
+    outline: 5px solid #04755b;
+    position: fixed;
+    bottom: 115px;
+    right: 10px;
+}
+
+#button1 {
+    color: rgb(255, 255, 255);
+    width: 250px;
+    height: 60px;
+    font-size: x-large;
+    border-radius: 50px;
+    background-color: #ee510c;
+    border: 3px solid rgb(255, 255, 255);
+    outline: 5px solid #ee500cd5;
+
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+
+}
+
+#button1 a {
+    color: white;
+}
